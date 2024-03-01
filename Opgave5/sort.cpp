@@ -11,9 +11,9 @@ vector<int> lowToHighSort(vector<int> vector) {
             }
         }
         if (minimum != i) {
-            int temperary = vector[i];
+            int temporary = vector[i];
             vector[i] = vector[minimum];
-            vector[minimum] = temperary;
+            vector[minimum] = temporary;
         }
     }
     return vector;
