@@ -18,7 +18,6 @@ void show(vector<Comparable> v)
 int main()
 {
     int n_values[] = {10, 100, 1000, 10000};
-
     for (int n : n_values)
     {
         vector<int> values(n);
