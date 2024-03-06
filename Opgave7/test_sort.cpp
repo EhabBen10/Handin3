@@ -11,21 +11,23 @@ void show(vector<Comparable> v)
 {
     cout << "[";
     for (Comparable i : v)
-        cout << v[i] << ", ";
-    cout << "]";
+        cout << i << ", ";
+    cout << "]" << endl;
 }
 
 int main()
 {
     int n_values[] = {10, 100, 1000, 10000};
-
     for (int n : n_values)
     {
         vector<int> values(n);
         cout << values.size() << endl;
         // Generate Random values
         auto f = []() -> int
-        { return rand() % 10000; };
+        {
+            auto v = rand() % 10000;
+            return v;
+        };
 
         // Fill up the vector
         generate(values.begin(), values.end(), f);
@@ -49,7 +51,7 @@ int main()
         cout << duration.count() << endl;
 
         start = high_resolution_clock::now();
-        show(values);
+        sort(values.begin(), values.end());
         stop = high_resolution_clock::now();
         duration = duration_cast<microseconds>(stop - start);
         cout << "Time taken by function when stl sort: ";
