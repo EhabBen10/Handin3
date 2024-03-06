@@ -3,11 +3,12 @@
 
 bool recursive_search(std::vector<int> A, int value, int index)
 {
-
+    // base case
     if (index == A.size())
     {
         return false;
     }
+    // base case
     if (A[index] == value)
     {
         return true;

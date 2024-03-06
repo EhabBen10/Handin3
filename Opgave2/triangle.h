@@ -26,10 +26,8 @@ public:
         printstars(m);
 
         // recursive case
-        if (m != n)
-        {
-            triangle(m + 1, n);
-            printstars(m);
-        }
+        triangle(m + 1, n);
+        printstars(m);
+        return;
     }
 };
